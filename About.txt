@@ -1,0 +1,21 @@
+Acerca de OptimOrm
+------------------------------------------------------------------------------------------------------------------------------------
+
+Compatibilidad:
+
+Relaciones:
+Control de integridad referencial limitado.
+	Todas las relaciones se procesan luego del modelo. Por lo tanto, si un modelo contiene otros relacionados que aún no existen en 
+	la base de datos, la integridad referencial ocasionará una excepción. 
+	Solución: no especificar reglas de integridad referencial en la base de datos.
+	
+
+
+ToDo:
+
+Descriptores: si se brinda soporte para relaciones ligeras (descriptores), de modo que los modelos la referencien agregando una 
+relación, entonces hacer que Descriptor herede de Model y agregar las properties correspondientes.
+Tener en cuenta que si se agrega como relación, entonces el dispatcher de Model va a actualizar ese registro de descriptor cada vez
+que se guarde una propiedad. Considerar la opción de agregar algun mecanismo de control sobre Model que determine si un registro
+está "sucio" (dirty), es decir, cuando se modificó alguna de sus propiedades, sin perjuicio de que esté "persisted" ó no.
+
