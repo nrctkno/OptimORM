@@ -28,7 +28,7 @@ Automapping
 
 OptimOrm.Mapper.buildClasses("Any\Path", New OptimOrm.Translators.Code._ATranslator()_, "_Optionally, A Namespace_")
 
-All classes inherits from _OptimOrm.Model_.
+All classes inherit from _OptimOrm.Model_.
 
 Available translators:
 
