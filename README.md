@@ -13,7 +13,7 @@ Copy the whole OptimORM folder into your project. No mappings, no XMLs, no Entit
 Configuration
 ----
 
-OptimOrm.Connection.Configure(New SqlClient.SqlConnection("your\_connection\_string"), New OptimOrm.Translators.DataSource._YourDatabaseTranslator_)
+    OptimOrm.Connection.Configure(New SqlClient.SqlConnection("your\_connection\_string"), New OptimOrm.Translators.DataSource._YourDatabaseTranslator_)
 
 Available Translators:
 
@@ -26,7 +26,7 @@ Available Translators:
 Automapping
 ----
 
-OptimOrm.Mapper.buildClasses("Any\Path", New OptimOrm.Translators.Code._ATranslator()_, "_Optionally, A Namespace_")
+    OptimOrm.Mapper.buildClasses("Any\Path", New OptimOrm.Translators.Code._ATranslator()_, "_Optionally, A Namespace_")
 
 All classes inherit from _OptimOrm.Model_.
 
