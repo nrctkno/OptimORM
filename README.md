@@ -44,15 +44,15 @@ Usage
 
   Create an entity:
 
-    dim a as Entity1= new Entity1()
-    dim b as Entity2= new Entity2()
-    a.fieldA=aValue
+    dim a as EntityA= new EntityA()
+    dim b as EntityB= new EntityB()
+    a.field1=aValue
     a.fieldN=aValue
-    b.fieldA=aValue
+    b.field1=aValue
     b.fieldN=aValue
-    b.set_ARelatedObject_(b)
+    a.setEntityB(b)
     if a.save() then
-      'everythig's ok
+      'ok
     else
       'error
     end if
