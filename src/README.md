@@ -13,7 +13,7 @@ Copy the whole OptimORM folder into your project. No mappings, no XMLs, no Entit
 Configuration
 ----
 
-OptimOrm.Connection.Configure(New SqlClient.SqlConnection("your\_connection\_string"), New OptimOrm.Translators.DataSource._YourDatabaseTranslator_)
+    OptimOrm.Connection.Configure(New SqlClient.SqlConnection("your\_connection\_string"), New OptimOrm.Translators.DataSource._YourDatabaseTranslator_)
 
 Available Translators:
 
@@ -26,9 +26,9 @@ Available Translators:
 Automapping
 ----
 
-OptimOrm.Mapper.buildClasses("Any\Path", New OptimOrm.Translators.Code._ATranslator()_, "_Optionally, A Namespace_")
+    OptimOrm.Mapper.buildClasses("Any\Path", New OptimOrm.Translators.Code._ATranslator()_, "_Optionally, A Namespace_")
 
-All classes inherits from _OptimOrm.Model_.
+All classes inherit from _OptimOrm.Model_.
 
 Available translators:
 
@@ -44,15 +44,15 @@ Usage
 
   Create an entity:
 
-    dim a as Entity1= new Entity1()
-    dim b as Entity2= new Entity2()
-    a.fieldA=aValue
+    dim a as EntityA= new EntityA()
+    dim b as EntityB= new EntityB()
+    a.field1=aValue
     a.fieldN=aValue
-    b.fieldA=aValue
+    b.field1=aValue
     b.fieldN=aValue
-    b.set_ARelatedObject_(b)
+    a.setEntityB(b)
     if a.save() then
-      'everythig's ok
+      'ok
     else
       'error
     end if
